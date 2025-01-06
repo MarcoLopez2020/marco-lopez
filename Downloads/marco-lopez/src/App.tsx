@@ -13,6 +13,7 @@ import {
   Code,
   Monitor
 } from 'lucide-react';
+import image from './assets/f1.jpg';
 
 function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
@@ -58,7 +59,7 @@ function App() {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <img
-              src="assets\f1.jpg"
+              src={image}
               alt="Marco López"
               className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
             />
