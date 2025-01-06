@@ -58,7 +58,7 @@ function App() {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&h=800"
+              src="assets\f1.jpg"
               alt="Marco López"
               className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
             />
