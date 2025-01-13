@@ -64,30 +64,33 @@ function App() {
         </div>
       </nav>
 
-      {/* Home Section */}
-      <section 
-        ref={(el) => sections.current.home = el}
-        className="min-h-screen pt-20 flex items-center bg-gradient-to-br from-blue-50 to-indigo-50"
-      >
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2">
-            <img
-              src={image}
-              alt="Marco López"
-              className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
-            />
-          </div>
-          <div className="md:w-1/2 mt-8 md:mt-0">
-            <h1 className="text-4xl font-bold mb-4">¡Bienvenido a mi portafolio!</h1>
-            <p className="text-xl text-gray-600 mb-6">
-              Soy Marco López, un apasionado desarrollador de software dedicado a crear soluciones innovadoras y funcionales.
-            </p>
-            <p className="text-lg text-gray-600 mb-8">
-              Explora mi trabajo, proyectos y habilidades en esta página. Estoy comprometido con el aprendizaje continuo y siempre abierto a nuevas oportunidades para colaborar.
-            </p>
-          </div>
-        </div>
-      </section>
+{/* Home Section */}
+<section 
+  ref={(el) => sections.current.home = el}
+  className="min-h-screen pt-20 flex items-center bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-30 animate-pulse"></div> {/* Fondo animado */}
+  
+  <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+    <div className="md:w-1/2">
+      <img
+        src={image}
+        alt="Marco López"
+        className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
+      />
+    </div>
+    <div className="md:w-1/2 mt-8 md:mt-0">
+      <h1 className="text-4xl font-bold mb-4">¡Bienvenido a mi portafolio!</h1>
+      <p className="text-xl text-gray-600 mb-6">
+        Soy Marco López, un apasionado desarrollador de software dedicado a crear soluciones innovadoras y funcionales.
+      </p>
+      <p className="text-lg text-gray-600 mb-8">
+        Explora mi trabajo, proyectos y habilidades en esta página. Estoy comprometido con el aprendizaje continuo y siempre abierto a nuevas oportunidades para colaborar.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section 
