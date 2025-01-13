@@ -72,14 +72,6 @@ function App() {
             <p className="text-lg text-gray-600 mb-8">
               Explora mi trabajo, proyectos y habilidades en esta página. Estoy comprometido con el aprendizaje continuo y siempre abierto a nuevas oportunidades para colaborar.
             </p>
-            <div className="flex space-x-4">
-              <a href="www.linkedin.com/in/marco-lópez-98736b163" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <Linkedin size={32} />
-              </a>
-              <a href="https://github.com/MarcoLopez2020" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
-                <Github size={32} />
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -105,52 +97,55 @@ function App() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section 
-        ref={(el) => sections.current.experience = el}
-        className="py-20 bg-gray-50"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
-          <div className="max-w-4xl mx-auto space-y-12">
-            {/* FISEI Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
-              <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
-                <li>Mantuve computadores y otros equipos de hardware.</li>
-                <li>Diseñé, mantuve y mejoré aplicaciones web.</li>
-                <li>Realicé un inventario detallado de los activos de la institución.</li>
-                <li>Coordiné la entrega de informes detallados sobre las actividades realizadas.</li>
-              </ul>
-            </div>
+     {/* Experience Section */}
+<section 
+  ref={(el) => sections.current.experience = el}
+  className="py-20 bg-gray-50"
+>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
+    <div className="max-w-4xl mx-auto space-y-12">
+      {/* FISEI Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
+        <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/fisei.png" alt="FISEI Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
+          <li>Mantuve computadores y otros equipos de hardware.</li>
+          <li>Diseñé, mantuve y mejoré aplicaciones web.</li>
+          <li>Realicé un inventario detallado de los activos de la institución.</li>
+          <li>Coordiné la entrega de informes detallados sobre las actividades realizadas.</li>
+        </ul>
+      </div>
 
-            {/* GAD Santa Rosa Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
-              <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
-                <li>Implementé integración con la API del SRI.</li>
-                <li>Desarrollé funcionalidades para creación de facturas electrónicas y seguimiento de pagos.</li>
-                <li>Colaboré en la integración con herramientas de gestión interna.</li>
-              </ul>
-            </div>
+      {/* GAD Santa Rosa Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
+        <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="GAD Santa Rosa Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
+          <li>Implementé integración con la API del SRI.</li>
+          <li>Desarrollé funcionalidades para creación de facturas electrónicas y seguimiento de pagos.</li>
+          <li>Colaboré en la integración con herramientas de gestión interna.</li>
+        </ul>
+      </div>
 
-            {/* Santo Licor Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
-              <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
-                <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
-                <li>Optimicé estrategias de inventario y promoción.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Santo Licor Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
+        <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="Santo Licor Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
+          <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
+          <li>Optimicé estrategias de inventario y promoción.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 {/* Projects Section */}
 <section 
