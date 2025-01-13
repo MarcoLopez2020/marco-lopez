@@ -17,6 +17,10 @@ import image from './assets/f1.jpg';
 import fiseiImage from './assets/fisei.png';
 import gadSantaRosaImage from './assets/gad-santa-rosa-logo.png';
 import santoLicorImage from './assets/santo-licor-logo.jpg';
+import utaImage from './assets/uta.jpg';
+import c2Image from './assets/c2.jpg';
+import c1Image from './assets/c1.jpg';
+import c3Image from './assets/c3.jpg';
 
 function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
@@ -105,7 +109,61 @@ function App() {
           </div>
         </div>
       </section>
+{/* Educación Section */}
+<section 
+  ref={(el) => sections.current.education = el}
+  className="py-20 bg-white"
+>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Mi Educación</h2>
+    
+    <div className="education-item">
+      <h3 className="text-xl font-semibold">Universidad Técnica de Ambato - FISEI</h3>
+      <p>Graduado como Ingeniero en Software</p>
+      <img 
+        src={utaImage} 
+        alt="Logo UTA" 
+        className="education-image"
+      />
+    </div>
+    
+    <div className="education-item">
+      <h3 className="text-xl font-semibold">Participaciones en Congresos</h3>
+      <p>Certificado de Asistencia</p>
+      <img 
+        src={c2Image} 
+        alt="Certificado Asistencia" 
+        className="education-image"
+      />
+      
+      <p>Certificado de Culminación</p>
+      <img 
+        src={c2Image} 
+        alt="Certificado Culminación" 
+        className="education-image"
+      />
+    </div>
+    
+    <div className="education-item">
+      <h3 className="text-xl font-semibold">Cursos Adicionales</h3>
+      <p>Cursé un curso de Técnico en Business Analytics</p>
+      <img 
+        src={c1Image} 
+        alt="Certificado Business Analytics" 
+        className="education-image"
+      />
+      
+      <p>Cursé un curso de Curador de Datos</p>
+      <img 
+        src={c3Image} 
+        alt="Certificado Curador de Datos" 
+        className="education-image"
+      />
+    </div>
+  </div>
+</section>
 
+      
      {/* Experience Section */}
 <section 
   ref={(el) => sections.current.experience = el}
