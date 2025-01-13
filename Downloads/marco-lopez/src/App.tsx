@@ -19,6 +19,7 @@ function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
     home: null,
     about: null,
+    education: null,
     experience: null,
     projects: null,
     skills: null,
@@ -43,7 +44,13 @@ function App() {
                   onClick={() => scrollToSection(section)}
                   className="text-gray-600 hover:text-blue-600 capitalize"
                 >
-                  {section}
+                  {section === 'home' ? 'Inicio' : 
+                   section === 'about' ? 'Sobre mí' :
+                   section === 'education' ? 'Educación' :
+                   section === 'experience' ? 'Experiencia' :
+                   section === 'projects' ? 'Proyectos' :
+                   section === 'skills' ? 'Habilidades' : 
+                   section === 'contact' ? 'Contacto' : section}
                 </button>
               ))}
             </div>
@@ -84,6 +91,35 @@ function App() {
         </div>
       </section>
 
+
+      <section id="education" class="education">
+  <h2>Mi Educación</h2>
+  
+  <div class="education-item">
+    <h3>Universidad Técnica de Ambato - FISEI</h3>
+    <p>Graduado como Ingeniero en Software</p>
+    <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/uta.jpg" alt="Logo UTA" class="education-image">
+  </div>
+  
+  <div class="education-item">
+    <h3>Participaciones en Congresos</h3>
+    <p>Certificado de Asistencia</p>
+    <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c2.jpg" alt="Certificado Asistencia" class="education-image">
+    
+    <p>Certificado de Culminación</p>
+    <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c2.jpg" alt="Certificado Culminación" class="education-image">
+  </div>
+  
+  <div class="education-item">
+    <h3>Cursos Adicionales</h3>
+    <p>Cursé un curso de Técnico en Business Analytics</p>
+    <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c1.jpg" alt="Certificado Business Analytics" class="education-image">
+    
+    <p>Cursé un curso de Curador de Datos</p>
+    <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c3.jpg" alt="Certificado Curador de Datos" class="education-image">
+  </div>
+</section>
+
       {/* About Section */}
       <section 
         ref={(el) => sections.current.about = el}
@@ -105,102 +141,109 @@ function App() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section 
-        ref={(el) => sections.current.experience = el}
-        className="py-20 bg-gray-50"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
-          <div className="max-w-4xl mx-auto space-y-12">
-            {/* FISEI Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
-              <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
-                <li>Mantuve computadores y otros equipos de hardware.</li>
-                <li>Diseñé, mantuve y mejoré aplicaciones web.</li>
-                <li>Realicé un inventario detallado de los activos de la institución.</li>
-                <li>Coordiné la entrega de informes detallados sobre las actividades realizadas.</li>
-              </ul>
-            </div>
+{/* Experience Section */}
+<section 
+  ref={(el) => sections.current.experience = el}
+  className="py-20 bg-gray-50"
+>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
+    <div className="max-w-4xl mx-auto space-y-12">
+      {/* FISEI Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
+        <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/fisei.png" alt="FISEI Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
+          <li>Mantuve computadores y otros equipos de hardware.</li>
+          <li>Diseñé, mantuve y mejoré aplicaciones web.</li>
+          <li>Realicé un inventario detallado de los activos de la institución.</li>
+          <li>Coordiné la entrega de informes detallados sobre las actividades realizadas.</li>
+        </ul>
+      </div>
 
-            {/* GAD Santa Rosa Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
-              <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
-                <li>Implementé integración con la API del SRI.</li>
-                <li>Desarrollé funcionalidades para creación de facturas electrónicas y seguimiento de pagos.</li>
-                <li>Colaboré en la integración con herramientas de gestión interna.</li>
-              </ul>
-            </div>
+      {/* GAD Santa Rosa Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
+        <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="GAD Santa Rosa Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
+          <li>Implementé integración con la API del SRI.</li>
+          <li>Desarrollé funcionalidades para creación de facturas electrónicas y seguimiento de pagos.</li>
+          <li>Colaboré en la integración con herramientas de gestión interna.</li>
+        </ul>
+      </div>
 
-            {/* Santo Licor Experience */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
-              <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
-                <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
-                <li>Optimicé estrategias de inventario y promoción.</li>
-              </ul>
-            </div>
-          </div>
+      {/* Santo Licor Experience */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
+        <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
+        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="Santo Licor Logo" className="w-40 mb-4"/>
+        <ul className="list-disc list-inside space-y-2 text-gray-600">
+          <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
+          <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
+          <li>Optimicé estrategias de inventario y promoción.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Projects Section */}
+<section 
+  ref={(el) => sections.current.projects = el}
+  className="py-20 bg-white"
+>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">CI-CD DAS</h3>
+        <p className="text-gray-600 mb-4">Pruebas de integración continua y despliegue continuo.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">CI/CD</span>
         </div>
-      </section>
+        <a href="https://github.com/MarcoLopez2020/CI-CD_DAS" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
 
-      {/* Projects Section */}
-      <section 
-        ref={(el) => sections.current.projects = el}
-        className="py-20 bg-white"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">CI-CD DAS</h3>
-              <p className="text-gray-600 mb-4">Pruebas de integración continua y despliegue continuo.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">CI/CD</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Introducción a TresJS</h3>
-              <p className="text-gray-600 mb-4">Introducción a proyectos en 3D con TresJS.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Three.js</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Página de Perfil Flask</h3>
-              <p className="text-gray-600 mb-4">Página desarrollada en Flask de mi perfil.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Flask</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML/CSS</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Reconocimiento Facial IA</h3>
-              <p className="text-gray-600 mb-4">Proyecto de reconocimiento facial basado en IA.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">OpenCV</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Machine Learning</span>
-              </div>
-            </div>
-          </div>
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Introducción a TresJS</h3>
+        <p className="text-gray-600 mb-4">Introducción a proyectos en 3D con TresJS.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Three.js</span>
         </div>
-      </section>
+        <a href="https://github.com/MarcoLopez2020/intro_tresJS" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Reconocimiento Facial IA</h3>
+        <p className="text-gray-600 mb-4">Proyecto de reconocimiento facial basado en IA.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">OpenCV</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Machine Learning</span>
+        </div>
+        <a href="https://github.com/MarcoLopez2020/reconocimiento_facial_IA" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Mercury</h3>
+        <p className="text-gray-600 mb-4">Sistema desarrollado en Node.js para la gestión de proyectos.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Node.js</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+        </div>
+        <a href="https://github.com/SebasTix02/Mercury" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Skills Section */}
       <section 
