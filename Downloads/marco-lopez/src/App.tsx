@@ -115,7 +115,7 @@ function App() {
 {/* Educación Section */}
 <section 
   ref={(el) => sections.current.education = el}
-  className="py-20 bg-white"
+  className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50"
 >
   <div className="container mx-auto px-6">
     <h2 className="text-3xl font-bold mb-12 text-center">Mi Educación</h2>
@@ -165,6 +165,7 @@ function App() {
     </div>
   </div>
 </section>
+
       
 {/* Experience Section */}
 <section 
@@ -270,62 +271,64 @@ function App() {
   </div>
 </section>
 
-      {/* Skills Section */}
-      <section 
-        ref={(el) => sections.current.skills = el}
-        className="py-20 bg-gray-50"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Habilidades</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="flex flex-col items-center">
-                <Code2 size={40} className="text-blue-600 mb-2" />
-                <span>Python</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <FileCode size={40} className="text-orange-600 mb-2" />
-                <span>HTML5</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Cpu size={40} className="text-blue-500 mb-2" />
-                <span>CSS3</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Database size={40} className="text-green-600 mb-2" />
-                <span>MySQL/PostgreSQL</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Brain size={40} className="text-purple-600 mb-2" />
-                <span>Machine Learning</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <GitBranch size={40} className="text-gray-700 mb-2" />
-                <span>Git</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Cloud size={40} className="text-blue-400 mb-2" />
-                <span>AWS</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Server size={40} className="text-purple-500 mb-2" />
-                <span>Heroku</span>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-xl font-bold mb-6">Frameworks y Librerías</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['Django', 'Flask', 'Bootstrap', 'Keras', 'TensorFlow', 'PyTorch', 'NumPy', 'Pandas'].map((framework) => (
-                  <div key={framework} className="bg-white p-3 rounded-lg shadow-sm text-center">
-                    {framework}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+{/* Skills Section */}
+<section 
+  ref={(el) => sections.current.skills = el}
+  className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50"
+>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Habilidades</h2>
+    
+    <div className="max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="flex flex-col items-center">
+          <Code2 size={40} className="text-blue-600 mb-2" />
+          <span>Python</span>
         </div>
-      </section>
+        <div className="flex flex-col items-center">
+          <FileCode size={40} className="text-orange-600 mb-2" />
+          <span>HTML5</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <Cpu size={40} className="text-blue-500 mb-2" />
+          <span>CSS3</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <Database size={40} className="text-green-600 mb-2" />
+          <span>MySQL/PostgreSQL</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <Brain size={40} className="text-purple-600 mb-2" />
+          <span>Machine Learning</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <GitBranch size={40} className="text-gray-700 mb-2" />
+          <span>Git</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <Cloud size={40} className="text-blue-400 mb-2" />
+          <span>AWS</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <Server size={40} className="text-purple-500 mb-2" />
+          <span>Heroku</span>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h3 className="text-xl font-bold mb-6">Frameworks y Librerías</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {['Django', 'Flask', 'Bootstrap', 'Keras', 'TensorFlow', 'PyTorch', 'NumPy', 'Pandas'].map((framework) => (
+            <div key={framework} className="bg-white p-3 rounded-lg shadow-sm text-center hover:shadow-md transform hover:scale-105 transition-transform duration-300">
+              {framework}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section 
