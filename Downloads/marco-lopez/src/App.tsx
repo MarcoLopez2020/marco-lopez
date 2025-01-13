@@ -348,9 +348,9 @@ function App() {
               </a>
             </div>
             <div className="flex space-x-6">
-              <a href="www.linkedin.com/in/marco-lópez-98736b163" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <Linkedin size={32} />
-              </a>
+  <a href="https://www.linkedin.com/in/marco-lópez-98736b163" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+    <Linkedin size={32} />
+  </a>
               <a href="https://github.com/MarcoLopez2020" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
                 <Github size={32} />
               </a>
