@@ -152,11 +152,12 @@ function App() {
         </div>
       </section>
 
-     {/* Projects Section */}
-      <section 
-        ref={(el) => sections.current.projects = el}
-        className="py-20 bg-white"
-      <div className="container mx-auto px-6">
+{/* Projects Section */}
+<section 
+  ref={(el) => sections.current.projects = el}
+  className="py-20 bg-white"
+>
+  <div className="container mx-auto px-6">
     <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div className="bg-gray-50 p-6 rounded-lg shadow-md">
