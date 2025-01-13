@@ -156,51 +156,53 @@ function App() {
       <section 
         ref={(el) => sections.current.projects = el}
         className="py-20 bg-white"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">CI-CD DAS</h3>
-              <p className="text-gray-600 mb-4">Pruebas de integración continua y despliegue continuo.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">CI/CD</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Introducción a TresJS</h3>
-              <p className="text-gray-600 mb-4">Introducción a proyectos en 3D con TresJS.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Three.js</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Página de Perfil Flask</h3>
-              <p className="text-gray-600 mb-4">Página desarrollada en Flask de mi perfil.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Flask</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML/CSS</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">Reconocimiento Facial IA</h3>
-              <p className="text-gray-600 mb-4">Proyecto de reconocimiento facial basado en IA.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">OpenCV</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Machine Learning</span>
-              </div>
-            </div>
-          </div>
+      <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">CI-CD DAS</h3>
+        <p className="text-gray-600 mb-4">Pruebas de integración continua y despliegue continuo.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">CI/CD</span>
         </div>
-      </section>
+        <a href="https://github.com/MarcoLopez2020/CI-CD_DAS" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Introducción a TresJS</h3>
+        <p className="text-gray-600 mb-4">Introducción a proyectos en 3D con TresJS.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Three.js</span>
+        </div>
+        <a href="https://github.com/MarcoLopez2020/intro_tresJS" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Reconocimiento Facial IA</h3>
+        <p className="text-gray-600 mb-4">Proyecto de reconocimiento facial basado en IA.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">OpenCV</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Machine Learning</span>
+        </div>
+        <a href="https://github.com/MarcoLopez2020/reconocimiento_facial_IA" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+
+      <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-3">Mercury</h3>
+        <p className="text-gray-600 mb-4">Sistema desarrollado en Node.js para la gestión de proyectos.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Node.js</span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+        </div>
+        <a href="https://github.com/SebasTix02/Mercury" target="_blank" className="text-blue-500 mt-4 inline-block">Ver Proyecto</a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Skills Section */}
       <section 
