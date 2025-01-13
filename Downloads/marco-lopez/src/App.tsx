@@ -14,6 +14,9 @@ import {
   Monitor
 } from 'lucide-react';
 import image from './assets/f1.jpg';
+import fiseiImage from './assets/fisei.png';
+import gadSantaRosaImage from './assets/gad-santa-rosa-logo.png';
+import santoLicorImage from './assets/gad-santa-rosa-logo.png';
 
 function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
@@ -109,7 +112,7 @@ function App() {
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
         <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
-        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/fisei.png" alt="FISEI Logo" className="w-40 mb-4"/>
+        <img src={fiseiImage} alt="FISEI Logo" className="w-40 mb-4"/>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
           <li>Mantuve computadores y otros equipos de hardware.</li>
@@ -123,7 +126,7 @@ function App() {
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
         <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
-        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="GAD Santa Rosa Logo" className="w-40 mb-4"/>
+        <img src={gadSantaRosaImage} alt="GAD Santa Rosa Logo" className="w-40 mb-4"/>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
           <li>Implementé integración con la API del SRI.</li>
@@ -136,7 +139,7 @@ function App() {
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
         <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
-        <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad-santa-rosa-logo.png" alt="Santo Licor Logo" className="w-40 mb-4"/>
+        <img src={santoLicorImage} alt="Santo Licor Logo" className="w-40 mb-4"/>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
           <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
