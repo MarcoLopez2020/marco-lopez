@@ -19,7 +19,6 @@ function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
     home: null,
     about: null,
-    education: null,
     experience: null,
     projects: null,
     skills: null,
@@ -32,7 +31,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navegación */}
+      {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -44,7 +43,7 @@ function App() {
                   onClick={() => scrollToSection(section)}
                   className="text-gray-600 hover:text-blue-600 capitalize"
                 >
-                  {section === 'home' ? 'Inicio' : section === 'about' ? 'Sobre mí' : section === 'education' ? 'Educación' : section === 'experience' ? 'Experiencia' : section === 'projects' ? 'Proyectos' : 'Contacto'}
+                  {section}
                 </button>
               ))}
             </div>
@@ -52,7 +51,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Sección de Inicio */}
+      {/* Home Section */}
       <section 
         ref={(el) => sections.current.home = el}
         className="min-h-screen pt-20 flex items-center bg-gradient-to-br from-blue-50 to-indigo-50"
@@ -74,10 +73,10 @@ function App() {
               Explora mi trabajo, proyectos y habilidades en esta página. Estoy comprometido con el aprendizaje continuo y siempre abierto a nuevas oportunidades para colaborar.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              <a href="www.linkedin.com/in/marco-lópez-98736b163" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                 <Linkedin size={32} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
+              <a href="https://github.com/MarcoLopez2020" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
                 <Github size={32} />
               </a>
             </div>
@@ -85,38 +84,7 @@ function App() {
         </div>
       </section>
 
-      {/* Sección de Educación */}
-      <section
-        ref={(el) => sections.current.education = el}
-        className="py-20 bg-white"
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Mi Educación</h2>
-          <div className="space-y-8">
-            <div className="education-item">
-              <h3 className="text-2xl font-semibold">Universidad Técnica de Ambato - FISEI</h3>
-              <p>Graduado como Ingeniero en Software</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/uta.jpg" alt="Logo UTA" className="education-image" />
-            </div>
-            <div className="education-item">
-              <h3 className="text-2xl font-semibold">Participaciones en Congresos</h3>
-              <p>Certificado de Asistencia</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c2.jpg" alt="Certificado Asistencia" className="education-image" />
-              <p>Certificado de Culminación</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c2.jpg" alt="Certificado Culminación" className="education-image" />
-            </div>
-            <div className="education-item">
-              <h3 className="text-2xl font-semibold">Cursos Adicionales</h3>
-              <p>Cursé un curso de Técnico en Business Analytics</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c1.jpg" alt="Certificado Business Analytics" className="education-image" />
-              <p>Cursé un curso de Curador de Datos</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/c3.jpg" alt="Certificado Curador de Datos" className="education-image" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sección de Sobre mí */}
+      {/* About Section */}
       <section 
         ref={(el) => sections.current.about = el}
         className="py-20 bg-white"
@@ -137,7 +105,7 @@ function App() {
         </div>
       </section>
 
-      {/* Sección de Experiencia */}
+      {/* Experience Section */}
       <section 
         ref={(el) => sections.current.experience = el}
         className="py-20 bg-gray-50"
@@ -145,11 +113,10 @@ function App() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
           <div className="max-w-4xl mx-auto space-y-12">
-            {/* Experiencia FISEI */}
+            {/* FISEI Experience */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Departamento de Administración de Redes - FISEI</h3>
               <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024 | Universidad Técnica de Ambato</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/fisei.png" alt="FISEI Logo" className="w-40 mb-4"/>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
                 <li>Realicé una revisión integral de la red, inspeccionando y documentando el estado de routers y switches.</li>
                 <li>Mantuve computadores y otros equipos de hardware.</li>
@@ -159,67 +126,167 @@ function App() {
               </ul>
             </div>
 
-            {/* Experiencia GAD Santa Rosa */}
+            {/* GAD Santa Rosa Experience */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">GAD de Santa Rosa - Desarrollador de Sistema de Facturación</h3>
               <p className="text-gray-600 mb-4">Septiembre 2024 - Febrero 2025</p>
-              <img src="https://github.com/MarcoLopez2020/marco-lopez/blob/main/Downloads/marco-lopez/src/assets/gad.png" alt="GAD Logo" className="w-40 mb-4"/>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Diseñé y desarrollé un sistema de facturación para GAD de Santa Rosa, optimizando la gestión de datos fiscales.</li>
-                <li>Automatización de la generación de reportes y facturación en línea.</li>
-                <li>Mejoré la infraestructura de la base de datos para un manejo más eficiente de la información.</li>
+                <li>Desarrollé un sistema de facturación completo utilizando PHP y HTML.</li>
+                <li>Implementé integración con la API del SRI.</li>
+                <li>Desarrollé funcionalidades para creación de facturas electrónicas y seguimiento de pagos.</li>
+                <li>Colaboré en la integración con herramientas de gestión interna.</li>
+              </ul>
+            </div>
+
+            {/* Santo Licor Experience */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-2">Santo Licor - Desarrollador de Modelos de Machine Learning</h3>
+              <p className="text-gray-600 mb-4">Febrero 2024 - Julio 2024</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Desarrollé y entrené modelos de redes neuronales para predicción de ventas.</li>
+                <li>Implementé técnicas de preprocesamiento de datos y validación cruzada.</li>
+                <li>Optimicé estrategias de inventario y promoción.</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sección de Proyectos */}
+      {/* Projects Section */}
       <section 
         ref={(el) => sections.current.projects = el}
         className="py-20 bg-white"
       >
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
-          <div className="space-y-8">
-            {/* Proyecto 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Sistema de Gestión de Proyectos</h3>
-              <p className="text-gray-600 mb-4">Desarrollado con React y Node.js</p>
-              <p className="text-lg text-gray-600 mb-6">
-                Un sistema integral para la gestión de proyectos dentro de una empresa, con capacidades de asignación de tareas, visualización de avances y reportes.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">CI-CD DAS</h3>
+              <p className="text-gray-600 mb-4">Pruebas de integración continua y despliegue continuo.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">CI/CD</span>
+              </div>
             </div>
-            {/* Proyecto 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Aplicación de Gestión de Inventarios</h3>
-              <p className="text-gray-600 mb-4">Desarrollado con Python y Flask</p>
-              <p className="text-lg text-gray-600 mb-6">
-                Esta aplicación permite realizar un seguimiento del inventario de productos, con funciones para agregar, editar, eliminar y consultar productos.
-              </p>
+
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Introducción a TresJS</h3>
+              <p className="text-gray-600 mb-4">Introducción a proyectos en 3D con TresJS.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">JavaScript</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Three.js</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Página de Perfil Flask</h3>
+              <p className="text-gray-600 mb-4">Página desarrollada en Flask de mi perfil.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Flask</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">HTML/CSS</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Reconocimiento Facial IA</h3>
+              <p className="text-gray-600 mb-4">Proyecto de reconocimiento facial basado en IA.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">OpenCV</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">Machine Learning</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sección de Contacto */}
-      <section
-        ref={(el) => sections.current.contact = el}
+      {/* Skills Section */}
+      <section 
+        ref={(el) => sections.current.skills = el}
         className="py-20 bg-gray-50"
       >
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Contacto</h2>
-          <div className="max-w-lg mx-auto">
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-lg font-semibold">Correo Electrónico</label>
-              <input 
-                type="email" 
-                id="email"
-                className="w-full p-4 mt-2 border border-gray-300 rounded-md shadow-sm"
-                placeholder="alucardooxd@gmail.com"
-              />
+          <h2 className="text-3xl font-bold mb-12 text-center">Habilidades</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center">
+                <Code2 size={40} className="text-blue-600 mb-2" />
+                <span>Python</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <FileCode size={40} className="text-orange-600 mb-2" />
+                <span>HTML5</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Cpu size={40} className="text-blue-500 mb-2" />
+                <span>CSS3</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Database size={40} className="text-green-600 mb-2" />
+                <span>MySQL/PostgreSQL</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Brain size={40} className="text-purple-600 mb-2" />
+                <span>Machine Learning</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <GitBranch size={40} className="text-gray-700 mb-2" />
+                <span>Git</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Cloud size={40} className="text-blue-400 mb-2" />
+                <span>AWS</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Server size={40} className="text-purple-500 mb-2" />
+                <span>Heroku</span>
+              </div>
             </div>
 
+            <div className="mt-12">
+              <h3 className="text-xl font-bold mb-6">Frameworks y Librerías</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {['Django', 'Flask', 'Bootstrap', 'Keras', 'TensorFlow', 'PyTorch', 'NumPy', 'Pandas'].map((framework) => (
+                  <div key={framework} className="bg-white p-3 rounded-lg shadow-sm text-center">
+                    {framework}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section 
+        ref={(el) => sections.current.contact = el}
+        className="py-20 bg-white"
+      >
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">Contacto</h2>
+          <div className="max-w-2xl mx-auto flex flex-col items-center space-y-6">
+            <div className="flex items-center space-x-4">
+              <Mail className="text-gray-600" size={24} />
+              <a href="alucardooxd@gmail.com" className="text-blue-600 hover:text-blue-800">
+               alucardooxd@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Phone className="text-gray-600" size={24} />
+              <a href="tel:+593123456789" className="text-blue-600 hover:text-blue-800">
+                +593 12 345 6789
+              </a>
+            </div>
+            <div className="flex space-x-6">
+              <a href="www.linkedin.com/in/marco-lópez-98736b163" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                <Linkedin size={32} />
+              </a>
+              <a href="https://github.com/MarcoLopez2020" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
+                <Github size={32} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
