@@ -117,52 +117,51 @@ function App() {
   <div className="container mx-auto px-6">
     <h2 className="text-3xl font-bold mb-12 text-center">Mi Educación</h2>
     
-    <div className="education-item">
-      <h3 className="text-xl font-semibold">Universidad Técnica de Ambato - FISEI</h3>
-      <p>Graduado como Ingeniero en Software</p>
+    <div className="education-item mb-12 text-center">
+      <h3 className="text-xl font-semibold mb-4">Universidad Técnica de Ambato - FISEI</h3>
+      <p className="text-lg mb-4">Graduado como Ingeniero en Software - Una experiencia educativa centrada en el desarrollo de software y tecnologías de la información.</p>
       <img 
         src={utaImage} 
         alt="Logo UTA" 
-        className="education-image"
+        className="w-48 h-48 object-cover mx-auto rounded-full shadow-lg"
       />
     </div>
     
-    <div className="education-item">
-      <h3 className="text-xl font-semibold">Participaciones en Congresos</h3>
-      <p>Certificado de Asistencia</p>
+    <div className="education-item mb-12 text-center">
+      <h3 className="text-xl font-semibold mb-4">Participaciones en Congresos</h3>
+      <p className="text-lg mb-2">Certificado de Asistencia - Un paso más en mi desarrollo profesional y académico.</p>
       <img 
         src={c2Image} 
         alt="Certificado Asistencia" 
-        className="education-image"
+        className="w-48 h-48 object-cover mx-auto rounded-lg shadow-lg mb-4"
       />
       
-      <p>Certificado de Culminación</p>
+      <p className="text-lg mb-2">Certificado de Culminación - Reconocimiento por completar el curso con éxito.</p>
       <img 
         src={c2Image} 
         alt="Certificado Culminación" 
-        className="education-image"
+        className="w-48 h-48 object-cover mx-auto rounded-lg shadow-lg"
       />
     </div>
     
-    <div className="education-item">
-      <h3 className="text-xl font-semibold">Cursos Adicionales</h3>
-      <p>Cursé un curso de Técnico en Business Analytics</p>
+    <div className="education-item text-center">
+      <h3 className="text-xl font-semibold mb-4">Cursos Adicionales</h3>
+      <p className="text-lg mb-2">Cursé un curso de Técnico en Business Analytics para fortalecer mis habilidades analíticas en el ámbito empresarial.</p>
       <img 
         src={c1Image} 
         alt="Certificado Business Analytics" 
-        className="education-image"
+        className="w-48 h-48 object-cover mx-auto rounded-lg shadow-lg mb-4"
       />
       
-      <p>Cursé un curso de Curador de Datos</p>
+      <p className="text-lg mb-2">Cursé un curso de Curador de Datos, enfocado en la gestión y organización de grandes volúmenes de datos.</p>
       <img 
         src={c3Image} 
         alt="Certificado Curador de Datos" 
-        className="education-image"
+        className="w-48 h-48 object-cover mx-auto rounded-lg shadow-lg"
       />
     </div>
   </div>
 </section>
-
       
      {/* Experience Section */}
 <section 
