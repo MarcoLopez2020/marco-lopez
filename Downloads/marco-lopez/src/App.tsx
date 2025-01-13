@@ -16,7 +16,7 @@ import {
 import image from './assets/f1.jpg';
 import fiseiImage from './assets/fisei.png';
 import gadSantaRosaImage from './assets/gad-santa-rosa-logo.png';
-import santoLicorImage from './assets/gad-santa-rosa-logo.png';
+import santoLicorImage from './assets/santo-licor-logo.jpg';
 
 function App() {
   const sections = useRef<{ [key: string]: HTMLDivElement | null }>({
@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white shadow-md z-50">
+           <nav className="fixed top-0 w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="text-xl font-bold">Marco López</span>
@@ -46,7 +46,13 @@ function App() {
                   onClick={() => scrollToSection(section)}
                   className="text-gray-600 hover:text-blue-600 capitalize"
                 >
-                  {section}
+                  {section === 'home' ? 'Inicio' : 
+                   section === 'about' ? 'Sobre mí' :
+                   section === 'education' ? 'Educación' :
+                   section === 'experience' ? 'Experiencia' :
+                   section === 'projects' ? 'Proyectos' :
+                   section === 'skills' ? 'Habilidades' : 
+                   section === 'contact' ? 'Contacto' : section}
                 </button>
               ))}
             </div>
